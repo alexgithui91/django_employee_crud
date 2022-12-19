@@ -32,7 +32,7 @@ DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
-CSRF_TRUSTED_ORIGINS = ["https://web-production-4667.up.railway.app/create/"]
+CSRF_TRUSTED_ORIGINS = ["https://web-production-4667.up.railway.app/"]
 
 # Application definition
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "corsheaders",
     "employee.apps.EmployeeConfig",
 ]
 
@@ -54,6 +55,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
