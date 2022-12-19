@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Gettingi Highscool</title>
+<title>Getting Highscool</title>
 {% endblock title %}
 
 {% block content %}
 <h1 style="text-align: center; padding-top: 1em; padding-bottom: 1em;">Create Employee</h1>
 
 <form action="" method="POST">
-    {% csrf_token %}
+    {% comment %} {% csrf_token %} {% endcomment %}
     {{ form.as_p }}
     <input type="submit" class="btn btn-success" value="Create">
 </form>
